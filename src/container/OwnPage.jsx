@@ -1,7 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import About from "../components/About";
 import photo from "../img/logolasles.svg";
 import illustrationPhoto from "../img/illustration.svg";
+import illustrationPhoto2 from "../img/illustration2.svg";
+import users from "../img/user.svg";
+import location from "../img/location.svg";
+import server from "../img/server.svg";
+import check from "../img/check.svg";
 function OwnPage() {
   const [btnClass, setBtnClass] = useState(
     "block hamburger md:hidden focus:outline-none"
@@ -77,7 +83,7 @@ function OwnPage() {
           </div>
         </div>
       </div>
-      <div className="flex mt-8 sm:flex-col-reverse md:flex-row">
+      <div className="flex mt-8 sm:flex-col-reverse  md:flex-row">
         <div className="sm:ml-6 md:ml-32 sm:mt-4 md:mt-12">
           <p className="sm:text-3xl md:text-5xl md:leading-snug font-semibold">
             Want anything to be easy with{" "}
@@ -88,12 +94,70 @@ function OwnPage() {
             <span className="font-bold">LaslesVPN</span> discover interesting
             features from us.
           </p>
-          <button className="mt-8 border border-[#F53838] rounded-md px-12 py-2 text-base text-[#F53838] font-bold hover:bg-[#F53838] hover:text-white">
+          <button className="mt-8 border border-[#F53838] rounded-md px-12 py-2 text-base text-[#F53838] font-bold sm:shadow-none md:shadow-[0_20px_40px_0_rgba(255,0,0,0.4)] hover:bg-[#F53838] hover:text-white">
             Get Started
           </button>
         </div>
         <div className="sm:mr-3 md:mr-32 sm:mt-4 md:mt-12">
-          <img src={illustrationPhoto} />
+          <img src={illustrationPhoto} alt="first" />
+        </div>
+      </div>
+      <div className="sm:mx-8 md:mx-32 sm:mt-8 md:mt-20 md:px-4 py-6 md:rounded-2xl md:shadow-[0_20px_60px_5px_rgba(220,220,220,0.4)] ">
+        <div className="sm:ml-10 md:ml-0 flex sm:flex-col md:flex-row md:space-x-4">
+          <About
+            image={users}
+            numbers="90+"
+            text="Users"
+            classText="flex flex-row sm:border-b-2 md:border-b-0 md:border-r-4 md:px-16 space-x-6 items-center p-3"
+          />
+          <About
+            image={location}
+            numbers="30+"
+            text="Location"
+            classText="flex sm:mt-6 md:mt-0 flex-row sm:border-b-2 md:border-b-0 md:border-r-4 md:px-16 space-x-6 items-center p-3"
+          />
+          <About
+            image={server}
+            numbers="50+"
+            text="Servers"
+            classText="flex sm:mt-6 md:mt-0 flex-row space-x-6 md:px-16 items-center p-3"
+          />
+        </div>
+      </div>
+      <div className="flex mt-12 sm:mx-6 md:mx-32 sm:flex-col md:flex-row md:space-x-32">
+        <div>
+          <img src={illustrationPhoto2} alt="second" />
+        </div>
+        <div>
+          <p className="text-3xl font-semibold leading-normal sm:pr-0 md:pr-20">
+            We Provide Many Features You Can Use
+          </p>
+          <p className="text-base mt-4 text-[#4F5665] leading-normal">
+            You can explore the features that we provide with fun and have their
+            own functions each feature.
+          </p>
+          <div className="flex flex-col mt-4 space-y-4">
+            <div className="flex flex-row items-center space-x-2">
+              <img src={check} alt="check" />
+              <p className="text-sm text-[#4F5665]">
+                Powerfull online protection.
+              </p>
+            </div>
+            <div className="flex flex-row items-center space-x-2">
+              <img src={check} alt="check" />
+              <p className="text-sm text-[#4F5665]">
+                Internet without borders.
+              </p>
+            </div>
+            <div className="flex flex-row items-center space-x-2">
+              <img src={check} alt="check" />
+              <p className="text-sm text-[#4F5665]">Supercharged VPN</p>
+            </div>
+            <div className="flex flex-row items-center space-x-2">
+              <img src={check} alt="check" />
+              <p className="text-sm text-[#4F5665]">No specific time limits.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
