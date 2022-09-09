@@ -124,7 +124,7 @@ function OwnPage() {
           />
         </div>
       </div>
-      <div className="flex mt-12 sm:mx-6 md:mx-32 sm:flex-col md:flex-row md:space-x-32">
+      <div className="flex my-20 sm:mx-6 md:mx-32 sm:flex-col md:flex-row md:space-x-32">
         <div>
           <img src={illustrationPhoto2} alt="second" />
         </div>
@@ -159,6 +159,13 @@ function OwnPage() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="bg-[#E5E5E5] sm:px-6 md:px-32 py-12">
+        <h2 className="text-3xl text-center font-semibold">Choose Your Plan</h2>
+        <p className="mt-6 text-center text-base text-[#4F5665] leading-relaxed">
+          Let's choose the package that is best for you and explore it and
+          cheerfully.
+        </p>
       </div>
     </div>
   );
