@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import photo from "../img/logolasles.svg";
+import illustrationPhoto from "../img/illustration.svg";
 function OwnPage() {
   const [btnClass, setBtnClass] = useState(
     "block hamburger md:hidden focus:outline-none"
@@ -74,6 +75,25 @@ function OwnPage() {
               Sign Up
             </button>
           </div>
+        </div>
+      </div>
+      <div className="flex mt-8 sm:flex-col-reverse md:flex-row">
+        <div className="sm:ml-6 md:ml-32 sm:mt-4 md:mt-12">
+          <p className="sm:text-3xl md:text-5xl md:leading-snug font-semibold">
+            Want anything to be easy with{" "}
+            <span className="font-extrabold">LaslesVPN.</span>
+          </p>
+          <p className="text-base mt-6 text-[#4F5665]">
+            Provide a network for all your needs with ease and fun using{" "}
+            <span className="font-bold">LaslesVPN</span> discover interesting
+            features from us.
+          </p>
+          <button className="mt-8 border border-[#F53838] rounded-md px-12 py-2 text-base text-[#F53838] font-bold hover:bg-[#F53838] hover:text-white">
+            Get Started
+          </button>
+        </div>
+        <div className="sm:mr-3 md:mr-32 sm:mt-4 md:mt-12">
+          <img src={illustrationPhoto} />
         </div>
       </div>
     </div>
