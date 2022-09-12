@@ -4,7 +4,7 @@ import star from "../img/star.svg";
 function Reccomend(props) {
   const { image, name, country, comment } = props;
   return (
-    <div className="h-[230px] flex flex-col border-2 rounded-md">
+    <div className="h-[230px] flex flex-col border-2 border-[#DDDDDD] rounded-md hover:border-[#F53838]">
       <div className="flex flex-row justify-around mt-5 items-center">
         <div className="flex flex-row space-x-4">
           <img src={image} alt="human" />

@@ -369,6 +369,22 @@ function OwnPage() {
                   comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
                 />
               </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={chinise}
+                  name="Yessica Christy"
+                  country="Shanxi, China"
+                  comment="“I like it because I like to travel far and still can connect with high speed”."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={korean}
+                  name="Kim Young Jou"
+                  country="Seoul, South Korea"
+                  comment="“This is very unusual for my business that currently requires a virtual private network that has high security”."
+                />
+              </SwiperSlide>
               <div className="flex flex-row justify-end space-x-5 items-center mr-8">
                 <button
                   className="border-2 border-[#F53838] px-3 py-3 rounded-full text-2xl text-[#F53838] hover:text-white hover:bg-[#F53838]"
@@ -421,15 +437,6 @@ function OwnPage() {
                   name="Kim Young Jou"
                   country="Seoul, South Korea"
                   comment="“This is very unusual for my business that currently requires a virtual private network that has high security”."
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <Reccomend
-                  image={poland}
-                  name="Viezh Robert"
-                  country="Warsaw, Poland"
-                  comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
                 />
               </SwiperSlide>
             </Swiper>
