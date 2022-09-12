@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { LeftCircleOutlined, RightCircleOutlined } from "@ant-design/icons";
 import { VscArrowLeft } from "react-icons/vsc";
 import { VscArrowRight } from "react-icons/vsc";
+import { VscTwitter } from "react-icons/vsc";
+import { CgFacebook } from "react-icons/cg";
+import { TiSocialInstagram } from "react-icons/ti";
+import { BiCopyright } from "react-icons/bi";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,6 +16,7 @@ import About from "../components/About";
 import Plan from "../components/Plan";
 import Reccomend from "../components/Reccomend";
 import photo from "../img/logolasles.svg";
+import footerLogo from "../img/footerLogo.svg";
 import illustrationPhoto from "../img/illustration.svg";
 import illustrationPhoto2 from "../img/illustration2.svg";
 import map from "../img/huge.svg";
@@ -431,7 +435,7 @@ function OwnPage() {
             </Swiper>
           </div>
         </div>
-        <div className="sm:mx-8 sm:mt-8 md:mt-20 flex sm:flex-col py-6 md:flex-row justify-around items-center py-6 md:rounded-2xl md:shadow-[0_20px_60px_5px_rgba(220,220,220,0.4)] ">
+        <div className="sm:mx-8 sm:mt-8 md:mt-20 flex sm:flex-col md:flex-row justify-between sm:px-0 md:px-14 items-center py-10 md:rounded-2xl md:shadow-[0_20px_60px_5px_rgba(220,220,220,0.5)] ">
           <div>
             <h3 className="text-2xl font-semibold">
               Subscribe Now for <br />
@@ -446,6 +450,64 @@ function OwnPage() {
           </button>
         </div>
       </div>
+      <footer className="bg-[#E5E5E5] flex sm:flex-col-reverse justify-between md:flex-row py-8 sm:px-6 md:px-32">
+        <div className="flex flex-col">
+          <img src={footerLogo} alt="logotype" width={150} />
+          <p className="text-sm leading-loose mt-2 text-[#4F5665]">
+            <span className="font-bold">LaslesVPN</span> is a private virtual
+            network that <br />
+            has unique features and has high security.
+          </p>
+          <div className="flex flex-row mt-3 space-x-2">
+            <a className="p-2 rounded-full text-[#F53838] bg-white">
+              <CgFacebook />
+            </a>
+            <a className="p-2 rounded-full text-[#F53838] bg-white">
+              <VscTwitter />
+            </a>
+            <a className="p-2 rounded-full text-[#F53838] bg-white">
+              <TiSocialInstagram />
+            </a>
+          </div>
+          <div className="flex flex-row items-center text-sm mt-4 text-[#AFB5C0]">
+            <BiCopyright />
+            <p>
+              2020Lasles<span className="font-bold">VPN</span>
+            </p>
+          </div>
+        </div>
+        <div className="flex sm:flex-col sm:pb-10 md:pb-0 md:flex-row md:space-x-14">
+          <div className="flex flex-col sm:pb-8 md:pb-0 space-y-4">
+            <h3 className="text-xl font-semibold">Product</h3>
+            <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
+              <a>Download</a>
+              <a>Pricing</a>
+              <a>Locations</a>
+              <a>Server</a>
+              <a>Countries</a>
+              <a>Blog</a>
+            </div>
+          </div>
+          <div className="flex flex-col sm:pb-8 md:pb-0 space-y-4">
+            <h3 className="text-xl font-semibold">Engage</h3>
+            <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
+              <a>LaslesVPN ? </a>
+              <a>FAQ</a>
+              <a>Tutorials</a>
+              <a>About Us</a>
+              <a>Privacy Policy</a>
+              <a>Terms of Service</a>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-xl font-semibold">Earn Money</h3>
+            <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
+              <a>Affiliate</a>
+              <a>Become Partner</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
