@@ -5,6 +5,7 @@ import Plan from "../components/Plan";
 import photo from "../img/logolasles.svg";
 import illustrationPhoto from "../img/illustration.svg";
 import illustrationPhoto2 from "../img/illustration2.svg";
+import map from "../img/huge.svg";
 import users from "../img/user.svg";
 import location from "../img/location.svg";
 import server from "../img/server.svg";
@@ -13,6 +14,11 @@ import littleCheck from "../img/littleCheck.svg";
 import freePlan from "../img/freePlan.svg";
 import standartPlan from "../img/standartPlan.svg";
 import premiumPlan from "../img/premiumPlan.svg";
+import netflixIcon from "../img/netflix.svg";
+import redditIcon from "../img/reddit.svg";
+import amazonIcon from "../img/amazon.svg";
+import discordIcon from "../img/discord.svg";
+import spotifyIcon from "../img/spotify.svg";
 function OwnPage() {
   const [btnClass, setBtnClass] = useState(
     "block hamburger md:hidden focus:outline-none"
@@ -36,7 +42,7 @@ function OwnPage() {
   };
   let freeDescription = (
     <>
-      <div className="flex flex-row sm:mt-0 md:mt-[-30px] space-x-3">
+      <div className="flex flex-row sm:mt-0 md:mt-[-33px] space-x-3">
         <img src={littleCheck} alt="check" width={15} />
         <p className="text-sm">Unlimited Bandwitch</p>
       </div>
@@ -237,8 +243,8 @@ function OwnPage() {
           </div>
         </div>
       </div>
-      <div className="bg-[#E5E5E5] sm:px-6 md:px-24 py-12">
-        <h2 className="text-3xl text-center font-semibold">Choose Your Plan</h2>
+      <div className="bg-[#F0F8FF] sm:px-6 md:px-24 py-12">
+        <h2 className="text-3xl text-center font-bold">Choose Your Plan</h2>
         <p className="mt-6 text-center text-base text-[#4F5665] leading-relaxed">
           Let's choose the package that is best for you and explore it and
           cheerfully.
@@ -266,6 +272,34 @@ function OwnPage() {
             price="$12"
             inMounth="/ mo"
           />
+        </div>
+        <div className="mt-36">
+          <h2 className="text-2xl text-center font-bold sm:px-0 md:px-80">
+            Huge Global Network of Fast VPN
+          </h2>
+          <p className="mt-6 text-center text-base text-[#4F5665] leading-relaxed sm:px-0 md:px-52">
+            See <span className="font-bold">LaslesVPN</span> everywhere to make
+            it easier for you when you move locations.
+          </p>
+
+          <img className="sm:mt-8 md:mt-32" src={map} alt="map" />
+          <div className="flex sm:flex-col sm:space-y-5 md:space-y-0 mt-6 md:flex-row md:space-x-5 items-center">
+            <a href="https://www.netflix.com/">
+              <img src={netflixIcon} alt="netflix" />
+            </a>
+            <a href="https://www.reddit.com/">
+              <img src={redditIcon} alt="reddit" />
+            </a>
+            <a href="https://www.amazon.com/">
+              <img src={amazonIcon} alt="amazon" />
+            </a>
+            <a href="https://discord.com/">
+              <img src={discordIcon} alt="discord" />
+            </a>
+            <a href="https://open.spotify.com/">
+              <img src={spotifyIcon} alt="spotify" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
