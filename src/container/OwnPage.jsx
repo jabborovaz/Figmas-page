@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import About from "../components/About";
+import Plan from "../components/Plan";
 import photo from "../img/logolasles.svg";
 import illustrationPhoto from "../img/illustration.svg";
 import illustrationPhoto2 from "../img/illustration2.svg";
@@ -8,6 +9,10 @@ import users from "../img/user.svg";
 import location from "../img/location.svg";
 import server from "../img/server.svg";
 import check from "../img/check.svg";
+import littleCheck from "../img/littleCheck.svg";
+import freePlan from "../img/freePlan.svg";
+import standartPlan from "../img/standartPlan.svg";
+import premiumPlan from "../img/premiumPlan.svg";
 function OwnPage() {
   const [btnClass, setBtnClass] = useState(
     "block hamburger md:hidden focus:outline-none"
@@ -29,6 +34,78 @@ function OwnPage() {
       );
     }
   };
+  let freeDescription = (
+    <>
+      <div className="flex flex-row sm:mt-0 md:mt-[-30px] space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Unlimited Bandwitch</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Encrypted Connection</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">No Traffic Logs</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Works on All Devices</p>
+      </div>
+    </>
+  );
+  let standartDescription = (
+    <>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Unlimited Bandwitch</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Encrypted Connection</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Yes Traffic Logs</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Works on All Devices</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Connect Anyware</p>
+      </div>
+    </>
+  );
+  let premiumDescription = (
+    <>
+      <div className="flex flex-row sm:mt-0 md:mt-8 space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Unlimited Bandwitch</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Encrypted Connection</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Yes Traffic Logs</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Works on All Devices</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Connect Anyware</p>
+      </div>
+      <div className="flex flex-row space-x-3">
+        <img src={littleCheck} alt="check" width={15} />
+        <p className="text-sm">Get New Features</p>
+      </div>
+    </>
+  );
   return (
     <div>
       <div className="sm:mx-6 md:mx-32 sm:mt-4 md:mt-12">
@@ -94,7 +171,7 @@ function OwnPage() {
             <span className="font-bold">LaslesVPN</span> discover interesting
             features from us.
           </p>
-          <button className="mt-8 border border-[#F53838] rounded-md px-12 py-2 text-base text-[#F53838] font-bold sm:shadow-none md:shadow-[0_20px_40px_0_rgba(255,0,0,0.4)] hover:bg-[#F53838] hover:text-white">
+          <button className="mt-8 border border-[#F53838] rounded-md px-12 py-2 text-base text-[#F53838] font-bold sm:shadow-none md:shadow-[0_20px_40px_0_rgba(255,0,0,0.3)] hover:bg-[#F53838] hover:text-white">
             Get Started
           </button>
         </div>
@@ -160,12 +237,36 @@ function OwnPage() {
           </div>
         </div>
       </div>
-      <div className="bg-[#E5E5E5] sm:px-6 md:px-32 py-12">
+      <div className="bg-[#E5E5E5] sm:px-6 md:px-24 py-12">
         <h2 className="text-3xl text-center font-semibold">Choose Your Plan</h2>
         <p className="mt-6 text-center text-base text-[#4F5665] leading-relaxed">
           Let's choose the package that is best for you and explore it and
           cheerfully.
         </p>
+        <div className="flex sm:flex-col sm:space-y-10 mt-14 md:space-y-0 md:flex-row md:justify-between">
+          <Plan
+            image={freePlan}
+            title="Free Plan"
+            descriptionCol={freeDescription}
+            price="Free"
+          />
+
+          <Plan
+            image={standartPlan}
+            title="Standart Plan"
+            descriptionCol={standartDescription}
+            price="$9"
+            inMounth="/ mo"
+          />
+
+          <Plan
+            image={premiumPlan}
+            title="Premium Plan"
+            descriptionCol={premiumDescription}
+            price="$12"
+            inMounth="/ mo"
+          />
+        </div>
       </div>
     </div>
   );
