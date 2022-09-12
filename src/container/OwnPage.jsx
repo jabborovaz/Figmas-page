@@ -1,7 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import { LeftCircleOutlined, RightCircleOutlined } from "@ant-design/icons";
+import { VscArrowLeft } from "react-icons/vsc";
+import { VscArrowRight } from "react-icons/vsc";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import About from "../components/About";
 import Plan from "../components/Plan";
+import Reccomend from "../components/Reccomend";
 import photo from "../img/logolasles.svg";
 import illustrationPhoto from "../img/illustration.svg";
 import illustrationPhoto2 from "../img/illustration2.svg";
@@ -19,6 +29,9 @@ import redditIcon from "../img/reddit.svg";
 import amazonIcon from "../img/amazon.svg";
 import discordIcon from "../img/discord.svg";
 import spotifyIcon from "../img/spotify.svg";
+import poland from "../img/poland.svg";
+import chinise from "../img/chinese.svg";
+import korean from "../img/korean.svg";
 function OwnPage() {
   const [btnClass, setBtnClass] = useState(
     "block hamburger md:hidden focus:outline-none"
@@ -26,6 +39,7 @@ function OwnPage() {
   const [menuClass, setMenuClass] = useState(
     "absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
   );
+  const [swiper, setSwiper] = useState(null);
 
   let openClose = () => {
     if (btnClass.includes("open") && !menuClass.includes("hidden")) {
@@ -300,6 +314,136 @@ function OwnPage() {
               <img src={spotifyIcon} alt="spotify" />
             </a>
           </div>
+        </div>
+        <div className="mt-28">
+          <h2 className="text-2xl text-center font-bold sm:px-0 md:px-80">
+            Trusted by Thousands of Happy Customer
+          </h2>
+          <p className="mt-6 text-center text-base text-[#4F5665] leading-relaxed sm:px-0 md:px-52">
+            These are the stories of our customers who have joined us with great
+            pleasure when using this crazy feature.
+          </p>
+          <div className="hidden md:block mt-14">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={3}
+              navigation
+              pagination={{ clickable: true }}
+              onSwiper={(swiper) => setSwiper(swiper)}
+            >
+              <SwiperSlide>
+                <Reccomend
+                  image={poland}
+                  name="Viezh Robert"
+                  country="Warsaw, Poland"
+                  comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={chinise}
+                  name="Yessica Christy"
+                  country="Shanxi, China"
+                  comment="“I like it because I like to travel far and still can connect with high speed”."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={korean}
+                  name="Kim Young Jou"
+                  country="Seoul, South Korea"
+                  comment="“This is very unusual for my business that currently requires a virtual private network that has high security”."
+                />
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <Reccomend
+                  image={poland}
+                  name="Viezh Robert"
+                  country="Warsaw, Poland"
+                  comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
+                />
+              </SwiperSlide>
+              <div className="flex flex-row justify-end space-x-5 items-center mr-8">
+                <button
+                  className="border-2 border-[#F53838] px-3 py-3 rounded-full text-2xl text-[#F53838] hover:text-white hover:bg-[#F53838]"
+                  onClick={() => {
+                    swiper.slidePrev();
+                  }}
+                >
+                  <VscArrowLeft />
+                </button>
+
+                <button
+                  className="border-2 border-[#F53838] px-3 py-3 rounded-full text-2xl text-[#F53838] hover:text-white hover:bg-[#F53838]"
+                  onClick={() => {
+                    swiper.slideNext();
+                  }}
+                >
+                  <VscArrowRight />
+                </button>
+              </div>
+            </Swiper>
+          </div>
+
+          <div className="md:hidden mt-8">
+            <Swiper
+              modules={[Navigation, Pagination, A11y]}
+              spaceBetween={50}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+            >
+              <SwiperSlide>
+                <Reccomend
+                  image={poland}
+                  name="Viezh Robert"
+                  country="Warsaw, Poland"
+                  comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={chinise}
+                  name="Yessica Christy"
+                  country="Shanxi, China"
+                  comment="“I like it because I like to travel far and still can connect with high speed”."
+                />
+              </SwiperSlide>
+              <SwiperSlide>
+                <Reccomend
+                  image={korean}
+                  name="Kim Young Jou"
+                  country="Seoul, South Korea"
+                  comment="“This is very unusual for my business that currently requires a virtual private network that has high security”."
+                />
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <Reccomend
+                  image={poland}
+                  name="Viezh Robert"
+                  country="Warsaw, Poland"
+                  comment="“Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best”."
+                />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+        <div className="sm:mx-8 sm:mt-8 md:mt-20 flex sm:flex-col py-6 md:flex-row justify-around items-center py-6 md:rounded-2xl md:shadow-[0_20px_60px_5px_rgba(220,220,220,0.4)] ">
+          <div>
+            <h3 className="text-2xl font-semibold">
+              Subscribe Now for <br />
+              Get Special Features!
+            </h3>
+            <p className="text-sm mt-4">
+              Let's subscribe with us and find the fun.
+            </p>
+          </div>
+          <button className="mt-8 whitespace-nowrap border border-[#F53838] rounded-md px-8 py-2 text-sm text-[#F53838] font-bold sm:shadow-none md:shadow-[0_20px_40px_0_rgba(255,0,0,0.3)] hover:bg-[#F53838] hover:text-white">
+            Subscribe Now
+          </button>
         </div>
       </div>
     </div>

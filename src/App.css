@@ -77,3 +77,31 @@
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
+
+.swiper-pagination {
+  position: static !important;
+  text-align: start !important;
+  margin-top: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  height: 13px !important;
+  width: 13px !important;
+  border-radius: 50% !important;
+  background: #2f4f4f !important;
+}
+
+.swiper-pagination-bullet-active {
+  height: 13px !important;
+  width: 40px !important;
+  border-radius: 25px !important;
+  background: #f53838 !important;
+}
+
+.swiper-button-next {
+  display: none !important;
+}
+
+.swiper-button-prev {
+  display: none !important;
+}
