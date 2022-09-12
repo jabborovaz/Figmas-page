@@ -466,13 +466,13 @@ function OwnPage() {
             has unique features and has high security.
           </p>
           <div className="flex flex-row mt-3 space-x-2">
-            <a className="p-2 rounded-full text-[#F53838] bg-white">
+            <a href="#" className="p-2 rounded-full text-[#F53838] bg-white">
               <CgFacebook />
             </a>
-            <a className="p-2 rounded-full text-[#F53838] bg-white">
+            <a href="#" className="p-2 rounded-full text-[#F53838] bg-white">
               <VscTwitter />
             </a>
-            <a className="p-2 rounded-full text-[#F53838] bg-white">
+            <a href="#" className="p-2 rounded-full text-[#F53838] bg-white">
               <TiSocialInstagram />
             </a>
           </div>
@@ -487,30 +487,30 @@ function OwnPage() {
           <div className="flex flex-col sm:pb-8 md:pb-0 space-y-4">
             <h3 className="text-xl font-semibold">Product</h3>
             <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
-              <a>Download</a>
-              <a>Pricing</a>
-              <a>Locations</a>
-              <a>Server</a>
-              <a>Countries</a>
-              <a>Blog</a>
+              <a href="#">Download</a>
+              <a href="#">Pricing</a>
+              <a href="#">Locations</a>
+              <a href="#">Server</a>
+              <a href="#">Countries</a>
+              <a href="#">Blog</a>
             </div>
           </div>
           <div className="flex flex-col sm:pb-8 md:pb-0 space-y-4">
             <h3 className="text-xl font-semibold">Engage</h3>
             <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
-              <a>LaslesVPN ? </a>
-              <a>FAQ</a>
-              <a>Tutorials</a>
-              <a>About Us</a>
-              <a>Privacy Policy</a>
-              <a>Terms of Service</a>
+              <a href="#">LaslesVPN ? </a>
+              <a href="#">FAQ</a>
+              <a href="#">Tutorials</a>
+              <a href="#">About Us</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <h3 className="text-xl font-semibold">Earn Money</h3>
             <div className="text-[#4F5665] text-sm flex flex-col space-y-2">
-              <a>Affiliate</a>
-              <a>Become Partner</a>
+              <a href="#">Affiliate</a>
+              <a href="#">Become Partner</a>
             </div>
           </div>
         </div>
